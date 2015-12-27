@@ -1,7 +1,6 @@
 # calls
----
 Unicorn Systems' homework assignment
----
+
 Build application for creating TODO list of calls
 You should create simple application to create TODO list of today's calls. Application consists of just one page and there is no need for some middleware or backend.
 You can use any Javascript frameworks and libraries (MVC frameworks prefered) you prefer. Application stores all the data to local storage. Graphical design is up to the programmer, also some CSS framework can be used (Javascript quality is the most important).
