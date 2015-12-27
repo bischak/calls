@@ -11,9 +11,10 @@ For application behaviour and description see the following:
 Section to add the new call. It consists of these inputs:
 * name ­(max 30 characters)
 * phone number ­(each phone number should start with + or 00 followed by digits; characters (, ) or - are allowed at positions 2 to 8 in the string), e.g.:  
+	* +420111222333
 	* +(420) 111 222 333
 	* +(420)­-111222333
-	* +420111222333
+	* 00(420)-111222333  
 	* 00420111222333  
 * time ­(mm:ss)
 Ignore all whitespaces when storing the record and convert + to 00. Stored and displayed format of phone number is­ 00XXX XXX XXX
