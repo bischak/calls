@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="callsApp">
+	<head>
+		<meta charset="utf-8">
+		<title>Calls</title>
+		<!-- build:css css/app.css -->
+		<link rel="stylesheet" href="../bower_components/ionicons/css/ionicons.min.css">
+		<link rel="stylesheet" href="../bower_components/open-sans-fontface/open-sans.css">
+		<link rel="stylesheet" href="css/app.css">
+		<!-- endbuild -->
+	</head>
+	<body>
+		<section id="calls-app" ng-controller="callsController">
+			<header id="header">
+				<h1>calls</h1>
+				<p>You may want to populate the app with sample data for either <a href="" ng-click="sampleCalls(0, 59)"><strong>this hour</strong></a> or <a href="" ng-click="sampleCalls(currentMinute(), currentMinute())"><strong>current minute</strong></a>, or you are more than welcome to input your own data using the form below. Call is automatically marked `done` after 1 minute of it's scheduled time.</p>
+				<p>Have a nice day and don't miss your calls.</p>
+				<form id="call-new" name="newCallForm" ng-submit="addCall()">
+					<input type="text" class="call-time pull-left" placeholder="mm:ss" ng-model="newCall.time" minlength="4" maxlength="5" pattern="^(?:\d|[01]\d|2[0-3]):[0-5]\d$" required autofocus>
+					<div class="call-profile pull-left">
+						<input type="text" class="call-name" placeholder="Name" ng-model="newCall.name" minlength="1" maxlength="30" pattern="^[a-zA-Z \-]+" required>
+						<input type="text" class="call-phone" placeholder="00420 XXX XXX XXX" ng-model="newCall.phone" minlength="13" pattern="^(\+|00)((\(\d{3}(\)|\)\-|\)\ ))|(\d{3}))(\s*(?:\d\s*){9})$" required>
+					</div>
+					<button type="submit" class="pull-left"></button>
+				</form>
+			</header>
+			<section id="calls-wrapper" ng-show="allCalls.length" ng-cloak>
+				<ul id="calls-list">
+					<li ng-repeat="call in allCalls | filter: statusFilter | orderBy:order track by $index" ng-class="{'active': call.time == nextCallTime() }">
+						<input class="call-done pull-left" type="checkbox" ng-checked="doneCalls(call)" disabled><label class="pull-left"></label>
+						<div class="call-time pull-left">{{call.time | limitTo: 2}}:{{call.time | limitTo: -2}}</div>
+						<div class="call-profile pull-left">
+							<p class="call-name">{{call.name}}</p>
+							<span class="call-phone">{{call.phone}}</span>
+						</div>						
+						<button class="call-delete" ng-click="removeCall(call)"></button>
+					</li>
+				</ul>
+			</section>			
+			<footer id="footer" ng-show="allCalls.length" ng-cloak>
+				<span id="count" class="pull-left">
+					<strong>{{(allCalls | filter: nextCalls).length }}</strong>
+					<ng-pluralize count="(allCalls | filter: nextCalls).length" when="{ one: 'call left', other: 'calls left' }"></ng-pluralize>
+				</span>
+				<ul id="filter" class="fo-list">
+					<li><a ng-class="{'active': location.path() == '/'} " href="#/">All</a></li>
+					<li><a ng-class="{'active': location.path() == '/next'}" href="#/next">Next</a></li>
+					<li><a ng-class="{'active': location.path() == '/done'}" href="#/done">Finished</a></li>
+				</ul>
+				<ul id="order" class="fo-list pull-right">
+					<li><a href="" ng-class="{'active': order=='name'}" ng-click="order = 'name'">name</a></li>
+					&bullet;
+					<li><a href="" ng-class="{'active': order=='time'}" ng-click="order = 'time'">time</a></li>
+				</ul>
+			</footer>
+		</section>
+		<footer id="info">
+			<p>Unicorn Systems' homework assignment, put together by <a href="http://www.facebook.com/volodyakushnir">Volodymyr Kushnir</a>.</p>
+			<p>Credits:
+				<a href="http://twitter.com/cburgdorf">Christoph Burgdorf</a>,
+				<a href="http://ericbidelman.com">Eric Bidelman</a>,
+				<a href="http://jacobmumm.com">Jacob Mumm</a> and
+				<a href="http://igorminar.com">Igor Minar</a>
+				|
+				<a href="http://todomvc.com">TodoMVC</a>
+			</p>
+		</footer>
+		<!-- build:js js/app.js -->
+		<script src="../bower_components/angular/angular.min.js"></script>
+		<script src="js/app.js"></script>
+		<script src="js/controllers/callsController.js"></script>
+		<script src="js/services/callsStorage.js"></script>
+		<!-- endbuild -->
+	</body>
+</html>

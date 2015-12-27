@@ -1,0 +1,21 @@
+{
+  "name": "calls",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Unicorn Systems' homework assignment",
+  "main": "index.html",
+  "dependencies": {},
+  "devDependencies": {
+    "bower": "^1.5.2",
+    "gulp": "^3.9.0",
+    "gulp-minify-css": "^1.2.1",
+    "gulp-uglify": "^1.4.0",
+    "gulp-usemin": "^0.3.14",
+    "rimraf": "^2.4.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Volodymyr Kushnir",
+  "license": "ISC"
+}

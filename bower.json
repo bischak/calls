@@ -1,0 +1,24 @@
+{
+  "name": "calls",
+  "version": "0.1.0",
+  "description": "Unicorn Systems' homework assignment",
+  "main": "index.html",
+  "authors": [
+    "Volodymyr Kushnir"
+  ],
+  "license": "MIT",
+  "homepage": "http://unicornsystems.eu/",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": ">=1.4.5",
+    "ionicons": ">=2.0.1",
+    "open-sans-fontface": ">=1.4.2"
+  },
+  "devDependencies": {}
+}
