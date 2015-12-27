@@ -1,5 +1,6 @@
 # calls
 **Unicorn Systems' homework assignment**
+![Result](result.png)
 
 #### Usage
 At minimum you have to `git clone https://github.com/volodymyr-kushnir/calls.git` and `bower install`. Also, you can uglify the stuff with `npm install` and `gulp build`. Who knew?!  
