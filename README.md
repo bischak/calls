@@ -11,7 +11,6 @@ For application behaviour and description see the following:
 Section to add new call. It consists of these inputs:
 * name ­(max 30 characters)
 * phone number ­(*see phone number validation below*)
-* time ­(mm:ss)
 Phone number validation ­- each phone number should start with '+' or '00' string followed by digits or characters '(', ')', '­'. You should ignore all whitespaces when storing the record and convert '+' to '00' (there should be just one format to display phone number). Characters '(',')' and '­' can be used just once and should be just on position 2 to 8 in the string.
 Example of valid phone numbers:
 * +(420) 111 222 333
@@ -19,7 +18,8 @@ Example of valid phone numbers:
 * +420111222333
 * 00420111222333
 Stored and display format of phone number -­ 00XXX XXX XXX
-Store all data to local storage.
+* time ­(mm:ss)
+Store all data to the local storage.
 
 ### List of calls
 Display list of calls stored by user as shown in wireframe.
