@@ -8,15 +8,15 @@ For application behaviour and description see the following:
 ![Wireframe](wireframe.png)
 
 #### Add call
-Section to add new call. It consists of these inputs:
+Section to add the new call. It consists of these inputs:
 * name ­(max 30 characters)
-* phone number ­(each phone number should start with + or 00 string followed by digits or characters (, ), -. You should ignore all whitespaces when storing the record and convert + to 00. Characters (, ) and - can be used just once at positions 2 to 8 in the string. Stored and displayed format of phone number is­ 00XXX XXX XXX)  
-Example of valid phone numbers:  
-* +(420) 111 222 333
-* +(420)­-111222333
-* +420111222333
-* 00420111222333  
+* phone number ­(each phone number should start with + or 00 followed by digits; characters (, ) or - are allowed at positions 2 to 8 in the string), e.g.:  
+	* +(420) 111 222 333
+	* +(420)­-111222333
+	* +420111222333
+	* 00420111222333  
 * time ­(mm:ss)
+Ignore all whitespaces when storing the record and convert + to 00. Stored and displayed format of phone number is­ 00XXX XXX XXX
 
 #### List of calls
 Display list of calls stored by user as shown in wireframe.  
