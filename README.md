@@ -28,9 +28,9 @@ Each row consists of these columns:
 * delete action (deletes this record from the storage)
 * checkbox (disabled; checked if the time of call < current time)  
 
-Default sort of list is by time ASC. User can sort by name and time.  
-Below the table are 3 buttons:  
-* all -­ display all records in list
+List can be sorted by either name or time (default).  
+There should be three buttons below the table:  
+* all -­ display all records in the list
 * next ­- display just calls in future
 * finished -­ display just calls in past
 
