@@ -8,10 +8,10 @@ For application behaviour and description see the following:
 ![Wireframe](wireframe.png)
 
 ### Add call
-Section to add new record of call. It consists of these inputs:
-* name ­validate for max. of 30 characters
-* phone number ­see phone number validation below
-* time ­just time, in mm:ss format
+Section to add new call. It consists of these inputs:
+* name ­(max 30 characters)
+* phone number ­(*see phone number validation below*)
+* time ­(mm:ss)
 Phone number validation ­- each phone number should start with '+' or '00' string followed by digits or characters '(', ')', '­'. You should ignore all whitespaces when storing the record and convert '+' to '00' (there should be just one format to display phone number). Characters '(',')' and '­' can be used just once and should be just on position 2 to 8 in the string.
 Example of valid phone numbers:
 * +(420) 111 222 333
