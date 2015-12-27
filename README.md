@@ -35,5 +35,4 @@ There should be three buttons below the table:
 * finished -­ display just calls in past
 
 #### Next call
-This section should show to the user the next call of the day.
-In the ordered list of calls (by time ASC) find first record where time of call > current time and display that record.
+This section should show the next call of the day.
