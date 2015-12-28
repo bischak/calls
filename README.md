@@ -3,7 +3,7 @@
 ![Result](result.png)
 
 #### Usage
-At minimum you have to `git clone https://github.com/volodymyr-kushnir/calls.git` and `bower install`. Also, you can uglify the stuff with `npm install` and `gulp build`. Who knew?!  
+At very least you have to `git clone https://github.com/volodymyr-kushnir/calls.git` and `bower install`. Also, you can uglify the stuff with `npm install` and `gulp build`. Who knew?!  
 
 #### Reference
 Build application for creating TODO list of calls.  
